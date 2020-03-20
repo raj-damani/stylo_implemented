@@ -1,0 +1,2 @@
+Author,Title,LexicalDiversity,MeanWordLen,MeanSentenceLen,StdevSentenceLen,MeanParagraphLen,DocumentLen,Commas,Semicolons,Quotes,Exclamations,Colons,Dashes,Mdashes,Ands,Buts,Howevers,Ifs,Thats,Mores,Musts,Mights,This,Verys
+,stylometry-data/Shakespeare/testing.txt,36.0686,5.05433,8.48299,17.9578,18.3382,6684,84.507,12.2474,0,12.2474,9.79792,0,8.57318,21.4329,1.83711,0,1.83711,6.1237,0.61237,0,1.22474,11.635,0.61237

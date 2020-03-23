@@ -8,7 +8,7 @@ from flaskblog import app, db
 from flask_restful import Resource, Api
 import pandas as pd
 api = Api(app)
-import mysql.connector
+import mysql
 mydb = mysql.connector.connect(host="ffr-app-dev.cgcpqzp3mekl.us-east-1.rds.amazonaws.com",user="admin",passwd="Thiswontlastlong!",database="ffr_app")
 mycursor = mydb.cursor()
 

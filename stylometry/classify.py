@@ -8,7 +8,7 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.ensemble import GradientBoostingRegressor
 from sklearn.decomposition import PCA, KernelPCA
 from sklearn.tree import export_graphviz
-from sklearn.cross_validation import train_test_split
+from sklearn.model_selection import train_test_split
 from sklearn.cross_validation import KFold
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import accuracy_score

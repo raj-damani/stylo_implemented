@@ -9,14 +9,14 @@ from flask_restful import Resource, Api
 import pandas as pd
 api = Api(app)
 import mysql.connector
-mydb = mysql.connector.connect(host="localhost",user="root",database="test")
+mydb = mysql.connector.connect(host="ffr-app-dev.cgcpqzp3mekl.us-east-1.rds.amazonaws.com",user="admin",passwd="Thiswontlastlong!",database="ffr_app")
 mycursor = mydb.cursor()
 
 check_train = False
 
 class TrainData(Resource):
 	def get(self):
-		mycursor.execute("SELECT full_name,comment FROM  Reviews")
+		mycursor.execute("SELECT full_name,comment FROM reviews")
 		final_list = []
 		for record in mycursor.fetchall():
 			author = record[0]
@@ -26,7 +26,7 @@ class TrainData(Resource):
 			final_list.append({"author": author, "text":text})
 		review_corpus = StyloCorpus.get_dictionary_from_db(final_list)
 		df = review_corpus.output_dataframe()
-		print(type(df))#.to_csv("with_db.csv")
+		#print(type(df))#.to_csv("with_db.csv")
 		global dtree
 		dtree = StyloDecisionTree(df)
 		dtree.fit()

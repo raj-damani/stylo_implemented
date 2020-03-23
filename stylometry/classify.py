@@ -9,7 +9,7 @@ from sklearn.ensemble import GradientBoostingRegressor
 from sklearn.decomposition import PCA, KernelPCA
 from sklearn.tree import export_graphviz
 from sklearn.model_selection import train_test_split
-from sklearn.cross_validation import KFold
+from sklearn.model_selection import KFold
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import mean_squared_error

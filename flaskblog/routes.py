@@ -47,7 +47,7 @@ class PredictData(Resource):
 		global dtree
 		global check_train
 		if not check_train:
-			mycursor.execute("SELECT full_name,comment FROM  Reviews")
+			mycursor.execute("SELECT full_name,comment FROM reviews")
 			final_list = []
 			for record in mycursor.fetchall():
 				author = record[0]

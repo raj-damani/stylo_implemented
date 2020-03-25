@@ -1,6 +1,6 @@
 <?php
 
-$string = isset($_GET['param1'])? urldecode($_GET['param1']) : 'name';
+$string = isset($_GET['param1'])? urlencode($_GET['param1']) : 'name';
 
 $call_url = 'http://localhost:5000/PredictData?param1=' . $string;
 

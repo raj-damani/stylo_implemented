@@ -1,6 +1,8 @@
 <?php
 
-$call_url = 'http://localhost:5000/PredictData?param1=' . urlencode('Best website for Write Name Online Greeting Wish Card Cool Profile Picture Free. Write name on birthday cakes birthday wishes.');
+$string = isset($_GET['param1'])? urldecode($_GET['param1']) : 'name';
+
+$call_url = 'http://localhost:5000/PredictData?param1=' . $string;
 
 $cURLConnection = curl_init();
 
